@@ -75,7 +75,7 @@
 	 <p>There is an image with a class of FLEXIBLE which is set to a max-width equal to the size of the image.  Simutaneously the class sets the image to a percentage width, allowing the image to flex in size.  The height is not changed, as this would skew the image.</p>
 	 <p>The LIST elements inside the NAV are displayed inline by setting the display to be inline-block.  Bullets are removed by setting the UL to display</p>
 	 <p>The FOOTER includes a clear:both to keep everything above it!</p>
-	  <img id="myPic" src= "http://dummyimage.com/300x400" alt="Picture of Me!" class="flexible" />
+	  <img src= "images/afternoon.jpg" alt="time of day pic" id= "mypic" class="flexible" />
      </main>
     <footer>
       <small>&copy; 2013, All Rights Reserved ~
@@ -90,29 +90,29 @@
 		let myHour = myDate.getHours();
 		let myGreeting = "";
 		let myColor = "";
-		let myPic = "";
+		let myPic = "images/";
 
 		if(myHour >= 5 && myHour < 12){
 			myGreeting = "Good morning!";
 			myColor = "yellow";
-			myPic = "morning.jpg";
+			myPic += "morning.jpg";
 		}else if(myHour >= 12 && myHour < 18){
 			myGreeting = "Good afternoon!";
 			myColor = "orange";
-			myPic = "afternoon.jpg";
+			myPic += "afternoon.jpg";
 		}else if(myHour >= 18 && myHour < 23){
 			myGreeting = "Good evening!";
-			myColor = "blue";
-			myPic = "evening.jpg";
+			myColor = "red";
+			myPic += "evening.jpg";
 		}else{
 			myGreeting = "Good night!";
-			myColor = "purple";
-			myPic = "night.jpg";
+			myColor = "lightblue";
+			myPic += "night.jpg";
 		};
 
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
-		document.getElementById('myPic').src = myPic;
+		document.getElementById("mypic").src = myPic;
 
 	</script>
 </body>
